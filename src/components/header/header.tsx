@@ -5,7 +5,7 @@ import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 
 function Header() {
     return (
-        <Grid container item xs={12}>
+        <Grid container item xs={12} style={{flex: 0}}>
             <Grid container item xs={3} sx={{background: "#00ADEE"}}>
                 <Grid item justifyContent="center" alignItems="center">
                     <IconButton><MenuRoundedIcon/></IconButton>

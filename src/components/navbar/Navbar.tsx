@@ -11,13 +11,20 @@ interface INavbarProps {
 const Navbar : React.FC<INavbarProps> = ({side}) => {
     return (
         <nav className={Style.navbar}>
-            <NavbarOption Icon={HomeIcon} label="Home" side={side} />
-            <NavbarOption Icon={HomeIcon} label="Home" side={side} />
-            <NavbarOption Icon={HomeIcon} label="Home" side={side} />
-            <NavbarOption Icon={HomeIcon} label="Home" side={side} />
-            <NavbarOption Icon={HomeIcon} label="Home" side={side} />
-            <NavbarOption Icon={HomeIcon} label="Home" side={side} />
-            <NavbarOption Icon={HomeIcon} label="Home" side={side} />
+            <div className={Style.navbarOptions}>
+                <NavbarOption Icon={HomeIcon} label="Home" side={side} />
+                <NavbarOption Icon={HomeIcon} label="Home" side={side} />
+                <NavbarOption Icon={HomeIcon} label="Home" side={side} />
+                <NavbarOption Icon={HomeIcon} label="Home" side={side} />
+                <NavbarOption Icon={HomeIcon} label="Home" side={side} />
+                <NavbarOption Icon={HomeIcon} label="Home" side={side} />
+                <NavbarOption Icon={HomeIcon} label="Home" side={side} />
+            </div>
+            <div className={Style.collapseButton} style={{textAlign: side === 'left' ?  'right' : 'left'}}>
+                <IconButton aria-label="expand">
+                    <ArrowRightIcon style={{transform: side === 'left' ?  'rotate(180deg)' : 'rotate(0deg)'}}/>
+                </IconButton>
+            </div>
         </nav>
     )
 }
@@ -31,7 +38,9 @@ interface INavbarOptionProps {
 const NavbarOption : React.FC<INavbarOptionProps> = ({Icon, label, side}) => {
     return (
         <div className={Style.navbarOption} style={{flexDirection: side === 'left' ? 'row' : 'row-reverse'}}>
-            <Icon />
+            <span className={Style.navbarOptionIcon}>
+                <Icon />
+            </span>
             <span>{label}</span>
             {/* <IconButton aria-label="expand"> */}
                 <ArrowRightIcon style={{transform: side === 'right' ?  'rotate(180deg)' : 'rotate(0deg)'}}/>

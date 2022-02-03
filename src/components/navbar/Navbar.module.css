@@ -3,10 +3,24 @@
     flex-direction: column;
 }
 
+.navbarOptions {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 .navbarOption {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 4px;
-    padding: 4px 8px;
+    /* gap: 4px; */
+    /* padding: 12px 8px; */
+}
+
+.navbarOption > * {
+    margin: 12px 8px;
+}
+
+.collapseButton {
+    padding: 8px 4px;
 }
