@@ -33,9 +33,9 @@ const NavbarOption : React.FC<INavbarOptionProps> = ({Icon, label, side}) => {
         <div className={Style.navbarOption} style={{flexDirection: side === 'left' ? 'row' : 'row-reverse'}}>
             <Icon />
             <span>{label}</span>
-            <IconButton aria-label="expand">
+            {/* <IconButton aria-label="expand"> */}
                 <ArrowRightIcon style={{transform: side === 'right' ?  'rotate(180deg)' : 'rotate(0deg)'}}/>
-            </IconButton>
+            {/* </IconButton> */}
         </div>
     )
 }
