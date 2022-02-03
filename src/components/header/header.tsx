@@ -40,7 +40,7 @@ const SearchAdornment = () => {
 
 function Header() {
     return (
-        <Grid container item xs={12} sx={{background: "#00ADEE"}}>
+        <Grid container item xs={12} sx={{background: "#00ADEE", flex: 0}}>
             <Grid container item xs={5}>
                 <Grid item display="flex" alignItems="center">
                     <IconButton sx={{m: 1, color: "white"}}><MenuRoundedIcon/></IconButton>
