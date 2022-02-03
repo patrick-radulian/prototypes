@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeIcon from '@mui/icons-material/Home';
 import Style from './Navbar.module.css'
 import { IconButton } from "@mui/material";
@@ -20,9 +20,9 @@ const Navbar : React.FC<INavbarProps> = ({side}) => {
                 <NavbarOption Icon={HomeIcon} label="Home" side={side} />
                 <NavbarOption Icon={HomeIcon} label="Home" side={side} />
             </div>
-            <div className={Style.collapseButton} style={{textAlign: side === 'left' ?  'right' : 'left'}}>
+            <div className={Style.collapseButton} style={{textAlign: side === 'left' ?  'right' : 'left'}} >
                 <IconButton aria-label="expand">
-                    <ArrowRightIcon style={{transform: side === 'left' ?  'rotate(180deg)' : 'rotate(0deg)'}}/>
+                    <ArrowRightIcon style={{transform: side === 'left' ?  'rotate(180deg)' : 'rotate(0deg)'}} />
                 </IconButton>
             </div>
         </nav>
@@ -36,14 +36,42 @@ interface INavbarOptionProps {
 }
 
 const NavbarOption : React.FC<INavbarOptionProps> = ({Icon, label, side}) => {
+
+    const [hovered, setHovered] = useState(false)
+
+
+
     return (
-        <div className={Style.navbarOption} style={{flexDirection: side === 'left' ? 'row' : 'row-reverse'}}>
+        <div 
+            className={Style.navbarOption} 
+            style={{flexDirection: side === 'left' ? 'row' : 'row-reverse'}} 
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+        >
+            {hovered && <NavbarSelected Icon={Icon} label={label} side={side} />}
             <span className={Style.navbarOptionIcon}>
                 <Icon />
             </span>
             <span>{label}</span>
             {/* <IconButton aria-label="expand"> */}
                 <ArrowRightIcon style={{transform: side === 'right' ?  'rotate(180deg)' : 'rotate(0deg)'}}/>
+            {/* </IconButton> */}
+        </div>
+    )
+}
+
+
+
+
+const NavbarSelected : React.FC<INavbarOptionProps> = ({Icon, label, side}) => {
+    return (
+        <div className={`${Style.navbarOption} ${Style.navbarSelected}`}>
+            <span className={Style.navbarOptionIcon}>
+                <Icon />
+            </span>
+            <span>{label}</span>
+            {/* <IconButton aria-label="expand"> */}
+                <ArrowRightIcon style={{color: 'white', transform: side === 'right' ?  'rotate(180deg)' : 'rotate(0deg)'}}/>
             {/* </IconButton> */}
         </div>
     )

@@ -10,17 +10,28 @@
 }
 
 .navbarOption {
+    position: relative;
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
     /* gap: 4px; */
     /* padding: 12px 8px; */
 }
 
-.navbarOption > * {
+.navbarOption > *:not(.navbarSelected) {
     margin: 12px 8px;
 }
 
 .collapseButton {
     padding: 8px 4px;
+}
+
+.navbarSelected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #434343;
+    width: 106%;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    color: white ;
 }
