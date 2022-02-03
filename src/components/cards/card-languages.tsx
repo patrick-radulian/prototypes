@@ -37,7 +37,7 @@ function CardLanguages() {
                                 <ListItemIcon>
                                     <Checkbox sx={{p: 0}} edge="start" checked={checked.indexOf(value) !== -1} tabIndex={-1} disableRipple inputProps={{'aria-labelledby': labelId}}/>
                                 </ListItemIcon>
-                                <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
+                                <ListItemText id={labelId} primary={value} />
                             </ListItemButton>
                         </ListItem>
                         );
