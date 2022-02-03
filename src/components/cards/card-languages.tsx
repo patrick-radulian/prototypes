@@ -25,7 +25,7 @@ function CardLanguages() {
             <CardContent sx={{maxHeight: {xl: 400, sm: 200}, overflow: "auto"}}>
                 <TextField size="small" label="Default" value="English (US)" fullWidth/>
 
-                <Divider sx={{mt: 2}}/>
+                <Divider light sx={{mt: 2}}/>
 
                 <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                     {["German (DE)", "Spanish (ES)", "French (FR)", "Durch (NL)", "Russian (RU)", "Chinese (ZH)", "Greek (EL)"].map((value) => {

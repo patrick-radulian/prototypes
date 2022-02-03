@@ -44,9 +44,9 @@ function Header() {
         <Grid container item xs={12} sx={{background: "#00ADEE"}} flex={0}>
             <Grid container item xs={5}>
                 <Grid item display="flex" alignItems="center">
-                    <IconButton sx={{m: 1, color: "white"}}><MenuRoundedIcon/></IconButton>
+                    <IconButton sx={{m: 0.5, color: "white"}}><MenuRoundedIcon/></IconButton>
                 </Grid>
-                <Grid item display="flex" alignItems="center">
+                <Grid item display="flex" alignItems="center" ml={2}>
                     <Grid container display="flex" alignItems="center">
                         <Grid item>
                             <BeachAccessIcon sx={{color: "white", transform: "scale(-1.25, 1.25) rotateZ(15deg)"}}/>
