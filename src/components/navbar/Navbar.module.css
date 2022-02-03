@@ -1,0 +1,12 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbarOption {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+}

@@ -1,0 +1,9 @@
+.body {
+    display: flex;
+    height: 100%;
+}
+
+.main {
+    background-color: #97c7c3;
+    flex-grow: 1;
+}
