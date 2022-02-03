@@ -13,7 +13,7 @@ function ProjectHome() {
             </Grid>
 
             <Grid item sm={1}>
-                <CardStatistics/>
+                {/* <CardStatistics/> */}
             </Grid>
 
             <Grid item sm={1}>
