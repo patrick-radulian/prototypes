@@ -48,8 +48,8 @@ const Navbar : React.FC<INavbarProps> = ({side}) => {
             <div className={Style.collapseButton} style={{textAlign: side === 'left' ?  'right' : 'left'}} >
                 <IconButton aria-label="expand" onClick={() => setCollapsed(!collapsed)}>
                     {side === 'left'
-                      ?  <ArrowLeftIcon style={{transform: collapsed ?  'rotate(180deg)' : 'rotate(0deg)'}} />
-                      :  <ArrowRightIcon style={{transform: collapsed ?  'rotate(180deg)' : 'rotate(0deg)'}} />
+                      ?  <ArrowLeftIcon style={{color: "white", transform: collapsed ?  'rotate(180deg)' : 'rotate(0deg)'}} />
+                      :  <ArrowRightIcon style={{color: "white", transform: collapsed ?  'rotate(180deg)' : 'rotate(0deg)'}} />
                     }
                 </IconButton>
             </div>
