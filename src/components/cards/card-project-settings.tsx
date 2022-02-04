@@ -6,10 +6,10 @@ import { Box } from "@mui/system";
 function CardProjectSettings() {
     return (
         <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #1a2d48, #556594)"}}>
+            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #002d69, #008cc0)"}}>
                 <CardHeader sx={{color: "white", py: 1}} title="Project Settings"/>
 
-                <CardContent sx={{maxHeight: {xl: 400, sm: 200}, overflow: "auto"}}>
+                <CardContent sx={{overflow: "auto"}}>
                     <List sx={{width: '100%', maxWidth: 360, mr: -1}}>
                         <ListItem disablePadding secondaryAction={<IconButton sx={{color: "#FFFFFF70"}}><EditIcon/></IconButton>}>
                             <Box>

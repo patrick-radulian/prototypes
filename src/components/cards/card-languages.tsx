@@ -48,13 +48,11 @@ function CardLanguages() {
 
     return (
         <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #1a2d48, #556594)"}}>
+            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #002d69, #008cc0)"}}>
                 <CardHeader sx={{color: "white", py: 1}} title="Languages"/>
 
                 <CardContent sx={{overflow: "auto"}}>
                     <CssTextField size="small" label="Default" value="English (US)" fullWidth/>
-
-                    <Divider light sx={{mt: 2}}/>
 
                     <List sx={{ width: '100%', maxWidth: 360, }}>
                         {["German (DE)", "Spanish (ES)", "French (FR)", "Durch (NL)", "Russian (RU)", "Chinese (ZH)", "Greek (EL)"].map((value) => {

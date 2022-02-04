@@ -37,14 +37,14 @@ function ValueAxisLabel(props: LabelProps) {
 function CardStatistics() {
     return (
         <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #1a2d48, #556594)"}}>
+            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #002d69, #008cc0)"}}>
                 <CardHeader sx={{color: "white", py: 1}} title="Statistics"/>
 
-                <CardContent sx={{maxHeight: {xl: 400, sm: 300}, overflow: "auto"}}>
+                <CardContent sx={{overflow: "auto"}}>
                     <Chart data={chartData} height={250}>
                         <ArgumentAxis labelComponent={ArgumentAxisLabel}/>
                         <ValueAxis labelComponent={ValueAxisLabel} position="left"/>
-                        <BarSeries valueField="amount" argumentField="label" color="#70be44"/>
+                        <BarSeries valueField="amount" argumentField="label" color="orange"/>
                         <Animation/>
                     </Chart>
                 </CardContent>
