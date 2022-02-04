@@ -57,8 +57,8 @@ function CardVisualization() {
 
     return (
         <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #002d69, #008cc0)"}}>
-                <CardHeader sx={{color: "white", py: 1}} title="Visualization"/>
+            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #aabbd0, #e6f6ff)"}}>
+                <CardHeader sx={{color: "#000000b0", py: 1}} title="Visualization"/>
 
                 <CardContent sx={{zIndex: 0}}>
                     <Container disableGutters sx={{overflow: "hidden"}}>

@@ -24,21 +24,21 @@ interface LabelProps {
 
 function ArgumentAxisLabel(props: LabelProps) {
     return(
-        <text style={{fontSize: 10, fontWeight: 400, fill: "white"}} x={props.x} y={props.y} dy="1em" textAnchor={props.textAnchor}>{props.text}</text>
+        <text style={{fontSize: 10, fontWeight: 400, fill: "00000090"}} x={props.x} y={props.y} dy="1em" textAnchor={props.textAnchor}>{props.text}</text>
     )
 }
 
 function ValueAxisLabel(props: LabelProps) {
     return(
-        <text style={{fontSize: 10, fontWeight: 400, fill: "white"}} x={props.x} y={props.y} dy="0.3em" textAnchor={props.textAnchor}>{props.text}</text>
+        <text style={{fontSize: 10, fontWeight: 400, fill: "00000090"}} x={props.x} y={props.y} dy="0.3em" textAnchor={props.textAnchor}>{props.text}</text>
     )
 }
 
 function CardStatistics() {
     return (
         <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #002d69, #008cc0)"}}>
-                <CardHeader sx={{color: "white", py: 1}} title="Statistics"/>
+            <Card sx={{color: "00000090", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #aabbd0, #e6f6ff)"}}>
+                <CardHeader sx={{color: "#000000b0", py: 1}} title="Statistics"/>
 
                 <CardContent sx={{overflow: "auto"}}>
                     <Chart data={chartData} height={250}>

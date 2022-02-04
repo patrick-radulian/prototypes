@@ -6,22 +6,22 @@ import { green } from "@mui/material/colors";
 
 const CssTextField = styled(TextField)({
     'label': {
-        color: "white"
+        color: "#00000090"
     },
     '& label.Mui-focused': {
-        color: 'white',
+        color: '#00000090',
     },
     '& .MuiOutlinedInput-root': {
-        color: "white",
+        color: "#00000090",
         padding: 0,
         '& fieldset': {
-            borderColor: 'white',
+            borderColor: '#00000090',
         },
         '&:hover fieldset': {
-          borderColor: 'white',
+          borderColor: '#00000090',
         },
         '&.Mui-focused fieldset': {
-          borderColor: 'white',
+          borderColor: '#00000090',
           borderWidth: 1
         },
     },
@@ -48,8 +48,8 @@ function CardLanguages() {
 
     return (
         <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #002d69, #008cc0)"}}>
-                <CardHeader sx={{color: "white", py: 1}} title="Languages"/>
+            <Card sx={{color: "#333333", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #aabbd0, #e6f6ff)"}}>
+                <CardHeader sx={{color: "#000000b0", py: 1}} title="Languages"/>
 
                 <CardContent sx={{overflow: "auto"}}>
                     <CssTextField size="small" label="Default" value="English (US)" fullWidth/>
@@ -62,7 +62,7 @@ function CardLanguages() {
                             <ListItem key={value} disablePadding>
                                 <ListItemButton sx={{px: 1}} role={undefined} onClick={handleToggle(value)} dense>
                                     <ListItemIcon>
-                                        <Checkbox sx={{p: 0, color: "white", "&.Mui-checked": { color: green[500] }}} edge="start" checked={checked.indexOf(value) !== -1} tabIndex={-1} disableRipple inputProps={{'aria-labelledby': labelId}}/>
+                                        <Checkbox sx={{p: 0, color: "#333333", "&.Mui-checked": { color: green[500] }}} edge="start" checked={checked.indexOf(value) !== -1} tabIndex={-1} disableRipple inputProps={{'aria-labelledby': labelId}}/>
                                     </ListItemIcon>
                                     <ListItemText id={labelId} primary={value} />
                                 </ListItemButton>

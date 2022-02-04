@@ -40,10 +40,10 @@ function ProjectHome() {
 
                 <Grid item sm={1} width="100%">
                     <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-                        <Card sx={{display: "grid", gridTemplateRows: "1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #002d69, #008cc0)"}}>
+                        <Card sx={{display: "grid", gridTemplateRows: "1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #aabbd0, #e6f6ff)"}}>
                             <CardContent>
                                 <Box height="100%" display="flex" justifyContent="center" alignItems="center">
-                                    <IconButton><AddRoundedIcon sx={{color: "white", fontSize: 128}}/></IconButton>
+                                    <IconButton><AddRoundedIcon sx={{color: "#00ADEE", fontSize: 128}}/></IconButton>
                                 </Box>
                             </CardContent>
                         </Card>

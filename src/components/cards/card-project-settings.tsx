@@ -6,35 +6,35 @@ import { Box } from "@mui/system";
 function CardProjectSettings() {
     return (
         <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #002d69, #008cc0)"}}>
-                <CardHeader sx={{color: "white", py: 1}} title="Project Settings"/>
+            <Card sx={{color: "#333333", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #aabbd0, #e6f6ff)"}}>
+                <CardHeader sx={{color: "#000000b0", py: 1}} title="Project Settings"/>
 
                 <CardContent sx={{overflow: "auto"}}>
                     <List sx={{width: '100%', maxWidth: 360, mr: -1}}>
-                        <ListItem disablePadding secondaryAction={<IconButton sx={{color: "#FFFFFF70"}}><EditIcon/></IconButton>}>
+                        <ListItem disablePadding secondaryAction={<IconButton sx={{color: "#000000b0"}}><EditIcon/></IconButton>}>
                             <Box>
-                                <Typography color="#FFFFFF70" variant="caption">Workflow</Typography>
+                                <Typography color="#000000b0" variant="caption">Workflow</Typography>
                                 <Typography gutterBottom>Enabled</Typography>
                             </Box>
                         </ListItem>
 
-                        <ListItem disablePadding secondaryAction={<IconButton sx={{color: "#FFFFFF70"}}><EditIcon/></IconButton>}>
+                        <ListItem disablePadding secondaryAction={<IconButton sx={{color: "#000000b0"}}><EditIcon/></IconButton>}>
                             <Box>
-                                <Typography color="#FFFFFF70" variant="caption">Quality Settings</Typography>
+                                <Typography color="#000000b0" variant="caption">Quality Settings</Typography>
                                 <Typography gutterBottom>Default</Typography>
                             </Box>
                         </ListItem>
 
-                        <ListItem disablePadding secondaryAction={<IconButton sx={{color: "#FFFFFF70"}}><EditIcon/></IconButton>}>
+                        <ListItem disablePadding secondaryAction={<IconButton sx={{color: "#000000b0"}}><EditIcon/></IconButton>}>
                             <Box>
-                                <Typography color="#FFFFFF70" variant="caption">User Groups</Typography>
+                                <Typography color="#000000b0" variant="caption">User Groups</Typography>
                                 <Typography gutterBottom>Public</Typography>
                             </Box>
                         </ListItem>
 
-                        <ListItem disablePadding secondaryAction={<IconButton sx={{color: "#FFFFFF70"}}><EditIcon/></IconButton>}>
+                        <ListItem disablePadding secondaryAction={<IconButton sx={{color: "#000000b0"}}><EditIcon/></IconButton>}>
                             <Box>
-                                <Typography color="#FFFFFF70" variant="caption">ID Generation</Typography>
+                                <Typography color="#000000b0" variant="caption">ID Generation</Typography>
                                 <Typography gutterBottom>Increment</Typography>
                             </Box>
                         </ListItem>
