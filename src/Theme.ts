@@ -26,6 +26,21 @@ export const AppTheme = createTheme({
             xxxl: 2100
         },
     },
+    typography: {
+        fontFamily: [
+          'Open Sans',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(','),
+        fontSize: 12,
+      },
 });
 
 declare module '@mui/material/styles' {

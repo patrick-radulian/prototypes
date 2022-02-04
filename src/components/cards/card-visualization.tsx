@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Card, CardContent, CardHeader, Container, Typography } from "@mui/material"
 import neo4j from "neo4j-driver";
 import ForceGraph3D from "3d-force-graph";
+import CardTemplate from "./card-template";
 
 type NodeObject = object & {
     id?: string | number;
@@ -56,17 +57,13 @@ function CardVisualization() {
     }, []);
 
     return (
-        <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%"}}>
-                <CardHeader sx={{background: "#00ADEE", py: 1, zIndex: 1}} title={<Typography color="white" fontSize={16}>Visualization</Typography>}/>
-
-                <CardContent sx={{maxHeight: {xl: 400, sm: 200}, zIndex: 0}}>
-                    <Container disableGutters sx={{overflow: "hidden"}}>
-                        <div ref={graphContainer} style={{position: "absolute", width: 400, height: 400, top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}/>
-                    </Container>
-                </CardContent>
-            </Card>
-        </Box>
+        <CardTemplate title="Visualization">
+            <CardContent sx={{maxHeight: {xl: 400, sm: 200}, zIndex: 0}}>
+                <Container disableGutters sx={{overflow: "hidden"}}>
+                    <div ref={graphContainer} style={{position: "absolute", width: 400, height: 400, top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}/>
+                </Container>
+            </CardContent>
+        </CardTemplate>
     )
 }
 
