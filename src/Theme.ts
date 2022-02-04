@@ -1,6 +1,20 @@
 import { createTheme } from "@mui/material/styles";
 
 export const AppTheme = createTheme({
+    components: {
+        MuiCssBaseline: {
+            styleOverrides: {
+                "::-webkit-scrollbar": {
+                    width: "4px",
+                    height: "4px",
+                    backgroundColor: "#00F"
+                },
+                "::-webkit-scrollbar-thumb": {
+                    color: "#F00"
+                }
+            }
+        }
+    },
     breakpoints: {
         values: {
             xs: 0,

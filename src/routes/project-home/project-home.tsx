@@ -32,9 +32,9 @@ function ProjectHome() {
 
             <Grid item sm={1} width="100%">
                 <Card sx={{paddingBottom: "100%", height: 0}}>
-                    <CardContent sx={{maxHeight: {xl: 400, sm: 200}}}>
+                    <CardContent sx={{padding: 0, paddingTop: "50%"}}>
                         <Box height="100%" display="flex" justifyContent="center" alignItems="center">
-                            <AddRoundedIcon sx={{color: "#00ADEE", fontSize: 64}}/>
+                            <AddRoundedIcon sx={{color: "#00ADEE", fontSize: 128}}/>
                         </Box>
                     </CardContent>
                 </Card>

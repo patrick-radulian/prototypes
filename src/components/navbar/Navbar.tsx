@@ -167,12 +167,12 @@ const SubOptionsMenu : React.FC<ISubOptionMenuProps> = ({subOptions, collapsed})
     return (
         <div className={Style.subOptionsMenu} style={menuPosition}>
         {subOptions && subOptions.map((subOption, i) => (
-            <>
-            <div>
-                {subOption.map(subSubOption => <div>{subSubOption}</div> )}
-            </div>
-            {i !== subOptions.length - 1 ? <hr className={Style.hr} /> : null}
-            </>
+            <React.Fragment key={i}>
+                <div>
+                    {subOption.map((subSubOption, i) => <div key={i}>{subSubOption}</div> )}
+                </div>
+                {i !== subOptions.length - 1 ? <hr className={Style.hr} /> : null}
+            </React.Fragment>
         ))}
         </div>
     )
