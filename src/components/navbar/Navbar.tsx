@@ -39,11 +39,11 @@ const Navbar : React.FC<INavbarProps> = ({side}) => {
     return (
         <nav className={Style.navbar}>
             <div className={Style.navbarOptions}>
-                {navbarOptions.map(option => <NavbarOption Icon={option.Icon} label={option.label} side={side} collapsed={collapsed} subOptions={option.subOptions} />)}
+                {navbarOptions.map((option, i) => <NavbarOption key={i} Icon={option.Icon} label={option.label} side={side} collapsed={collapsed} subOptions={option.subOptions} />)}
             </div>
             <div className={Style.collapseButton} style={{textAlign: side === 'left' ?  'right' : 'left'}} >
                 <IconButton aria-label="expand" onClick={() => setCollapsed(!collapsed)}>
-                    {side === 'left'  
+                    {side === 'left'
                       ?  <ArrowLeftIcon style={{transform: collapsed ?  'rotate(180deg)' : 'rotate(0deg)'}} />
                       :  <ArrowRightIcon style={{transform: collapsed ?  'rotate(180deg)' : 'rotate(0deg)'}} />
                     }
@@ -66,7 +66,7 @@ const NavbarOption : React.FC<INavbarOptionProps> = ({Icon, label, side, collaps
 
     const [hovered, setHovered] = useState(false)
 
-    const flexDirection : CSSProperties = side === 'left' 
+    const flexDirection : CSSProperties = side === 'left'
         ? { flexDirection: 'row' }
         : { flexDirection: 'row-reverse' }
 
@@ -90,7 +90,7 @@ const NavbarOption : React.FC<INavbarOptionProps> = ({Icon, label, side, collaps
                     <ArrowRightIcon style={{transform: side === 'right' ?  'rotate(180deg)' : 'rotate(0deg)'}}/>
                 </span>
             </div>
-                
+
         </div>
     )
 }
@@ -107,29 +107,29 @@ interface INavbarSelectedOptionProps {
 
 const NavbarSelected : React.FC<INavbarSelectedOptionProps> = ({Icon, label, side, subOptions, collapsed}) => {
 
-    const css : CSSProperties = side === 'left' 
+    const css : CSSProperties = side === 'left'
         ? {
             flexDirection: 'row',
             borderRadius: collapsed ? '0 4px 4px 0' : 0,
             width: collapsed ? 205 : '100%',
-            left: 0, 
+            left: 0,
             right: 'auto'
         }
         : {
             flexDirection: 'row-reverse',
             borderRadius: collapsed ? '4px 0 0 4px' : 0,
             width: collapsed ? 205 : '100%',
-            left: 'auto', 
+            left: 'auto',
             right: 0
         }
-    
+
     const [arrowHovered, setArrowHovered] = useState(false)
 
     return (
         <div className={Style.navbarSelectedOptionContainer}>
-            <div 
-                className={`${Style.navbarOption} ${Style.navbarSelected}`} 
-                style={css} 
+            <div
+                className={`${Style.navbarOption} ${Style.navbarSelected}`}
+                style={css}
                 onMouseLeave={() => setArrowHovered(false)}
             >
                 <span className={Style.navbarOptionIcon}>
@@ -156,7 +156,7 @@ interface ISubOptionMenuProps {
 
 const SubOptionsMenu : React.FC<ISubOptionMenuProps> = ({subOptions, collapsed}) => {
 
-    const menuPosition : CSSProperties = collapsed 
+    const menuPosition : CSSProperties = collapsed
         ? {top: '100%', left: 0}
         : {top: 0, left: '100%'}
 
@@ -164,7 +164,7 @@ const SubOptionsMenu : React.FC<ISubOptionMenuProps> = ({subOptions, collapsed})
         <div className={Style.subOptionsMenu} style={menuPosition}>
         {subOptions && subOptions.map((subOption, i) => (
             <>
-            <div className={Style.subOptionsDivider}>
+            <div>
                 {subOption.map(subSubOption => <div>{subSubOption}</div> )}
             </div>
             {i !== subOptions.length - 1 ? <hr className={Style.hr} /> : null}
