@@ -11,14 +11,14 @@ const chartData = [
 
 function CardStatistics() {
     return (
-        <Card>
+        <Card sx={{paddingBottom: "100%", height: 0}}>
             <CardHeader sx={{background: "#00ADEE", py: 1}} title={<Typography color="white" fontSize={16}>Statistics</Typography>}/>
 
-            <CardContent sx={{maxHeight: {xl: 400, sm: 200}, overflow: "auto"}}>
+            <CardContent sx={{maxHeight: {xl: 400, sm: 300}, overflow: "auto"}}>
                 <Chart data={chartData} height={250}>
                     <ArgumentAxis/>
                     <ValueAxis position="left"/>
-                    <BarSeries valueField="amount" argumentField="label"/>
+                    <BarSeries valueField="amount" argumentField="label" color="#70be44"/>
                     <Animation/>
                 </Chart>
             </CardContent>

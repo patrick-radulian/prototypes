@@ -1,11 +1,15 @@
 import React, { CSSProperties, useState } from "react";
 import Style from './Navbar.module.css'
-import { autocompleteClasses, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
-
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import CallSplitIcon from '@mui/icons-material/CallSplit';
+import LinkIcon from '@mui/icons-material/Link';
+import MediationIcon from '@mui/icons-material/Mediation';
+import FlakyIcon from '@mui/icons-material/Flaky';
 
 interface INavbarProps {
     side: 'left' | 'right'
@@ -25,11 +29,11 @@ const navbarOptions : INavbarOptionsObj[] = [
         ['Reports', 'Move metadata'],
         ['Close Project'],
      ] },
-    { Icon: HomeIcon, label: 'Corpus' },
-    { Icon: HomeIcon, label: 'Classification' },
-    { Icon: HomeIcon, label: 'Project Linking' },
-    { Icon: HomeIcon, label: 'Workflows' },
-    { Icon: HomeIcon, label: 'Ontologies' },
+    { Icon: MenuBookIcon, label: 'Corpus' },
+    { Icon: CallSplitIcon, label: 'Classification' },
+    { Icon: LinkIcon, label: 'Project Linking' },
+    { Icon: FlakyIcon, label: 'Workflows' },
+    { Icon: MediationIcon, label: 'Ontologies' },
 ]
 
 const Navbar : React.FC<INavbarProps> = ({side}) => {
@@ -83,7 +87,7 @@ const NavbarOption : React.FC<INavbarOptionProps> = ({Icon, label, side, collaps
             {hovered && <NavbarSelected Icon={Icon} label={label} side={side} subOptions={subOptions} collapsed={collapsed} />}
             <div className={Style.navbarOption} style={{...flexDirection, ...width}} >
                 <span className={Style.navbarOptionIcon}>
-                    <Icon />
+                    <Icon style={{color: "#00ADEE"}} />
                 </span>
                 <span className={Style.navbarOptionLabel}>{label}</span>
                 <span className={Style.navbarOptionIcon}>

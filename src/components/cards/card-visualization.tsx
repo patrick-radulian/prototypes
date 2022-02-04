@@ -40,11 +40,12 @@ function CardVisualization() {
                 const ids = new Set<string | number>();
                 links.forEach(l => {ids.add(l.source);ids.add(l.target);});
                 const gData: GraphData = { nodes: Array.from(ids).map(id => {return {id}}), links: links}
-                const Graph = ForceGraph3D()((graphContainer.current as HTMLDivElement))
-                    .width(300)
-                    .height(300)
+
+                ForceGraph3D()((graphContainer.current as HTMLDivElement))
+                    .width(400)
+                    .height(400)
                     .backgroundColor("white")
-                    .cameraPosition({x: 0, y: 0, z: -400})
+                    .cameraPosition({x: 0, y: 0, z: -500})
                     .showNavInfo(false)
                     .graphData(gData)
                     .nodeColor(() => "#00ADEE")
@@ -55,12 +56,12 @@ function CardVisualization() {
     }, []);
 
     return (
-        <Card>
+        <Card sx={{paddingBottom: "100%", height: 0}}>
             <CardHeader sx={{background: "#00ADEE", py: 1}} title={<Typography color="white" fontSize={16}>Visualization</Typography>}/>
 
             <CardContent sx={{maxHeight: {xl: 400, sm: 200}}}>
                 <Container disableGutters sx={{overflow: "hidden"}}>
-                    <div ref={graphContainer} style={{width: 300, height: 300}}/>
+                    <div ref={graphContainer} style={{width: 400, height: 400}}/>
                 </Container>
             </CardContent>
         </Card>

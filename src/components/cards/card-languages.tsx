@@ -19,7 +19,7 @@ function CardLanguages() {
     };
 
     return (
-        <Card>
+        <Card sx={{paddingBottom: "100%", height: 0}}>
             <CardHeader sx={{background: "#00ADEE", py: 1}} title={<Typography color="white" fontSize={16}>Languages</Typography>}/>
 
             <CardContent sx={{maxHeight: {xl: 400, sm: 200}, overflow: "auto"}}>
