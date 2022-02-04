@@ -44,11 +44,11 @@ function CardVisualization() {
                 ForceGraph3D()((graphContainer.current as HTMLDivElement))
                     .width(400)
                     .height(400)
-                    .backgroundColor("white")
+                    .backgroundColor("#00000000")
                     .cameraPosition({x: 0, y: 0, z: -500})
                     .showNavInfo(false)
                     .graphData(gData)
-                    .nodeColor(() => "#00ADEE")
+                    .nodeColor(() => "#70BE44")
                     .linkColor(() => "#999");
             }).catch(function (error) {
                 console.log(error);
@@ -57,8 +57,8 @@ function CardVisualization() {
 
     return (
         <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%"}}>
-                <CardHeader sx={{background: "#00ADEE", py: 1, zIndex: 1}} title={<Typography color="white" fontSize={16}>Visualization</Typography>}/>
+            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #1a2d48, #556594)"}}>
+                <CardHeader sx={{color: "white", py: 1}} title="Visualization"/>
 
                 <CardContent sx={{maxHeight: {xl: 400, sm: 200}, zIndex: 0}}>
                     <Container disableGutters sx={{overflow: "hidden"}}>

@@ -1,10 +1,10 @@
 .body {
-    display: flex;
+    background: linear-gradient(to top right, #0e1b2d, #39476f);
+    /* display: flex; */
     /* height: 100%; */
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 .main {
-    background-color: #efefef;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }

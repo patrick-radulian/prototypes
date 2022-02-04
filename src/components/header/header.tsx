@@ -8,31 +8,34 @@ import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 
 const CssTextField = styled(TextField)({
     'label': {
-        color: "white"
+        // color: "white"
     },
     '& label.Mui-focused': {
-        color: 'white',
+        // color: 'white',
     },
     '& .MuiOutlinedInput-root': {
-        color: "white",
+        // color: "white",
         padding: 0,
         '& fieldset': {
-            borderColor: 'white',
+            border: 'none',
         },
         '&:hover fieldset': {
-          borderColor: 'white',
+        //   borderColor: 'white',
         },
         '&.Mui-focused fieldset': {
-          borderColor: 'white',
+        //   borderColor: 'white',
           borderWidth: 1
         },
     },
+    'input': {
+        padding: '8.5px'
+    }
 });
 
 const SearchAdornment = () => {
     return (
         <InputAdornment position="start" sx={{m: 0, borderTopRightRadius: 4, borderBottomRightRadius: 4}}>
-            <Box display="flex" alignItems="center" sx={{background: "white", borderTopRightRadius: 4, borderBottomRightRadius: 4, paddingX: 2}}>
+            <Box display="flex" alignItems="center" sx={{borderTopRightRadius: 4, borderBottomRightRadius: 4, paddingX: 2}}>
                 <IconButton><SearchRoundedIcon sx={{color: "#00ADEE"}}/></IconButton>
             </Box>
         </InputAdornment>
@@ -41,8 +44,12 @@ const SearchAdornment = () => {
 
 function Header() {
     return (
-        <Grid container item xs={12} sx={{background: "#00ADEE"}} flex={0}>
-            <Grid container item xs={5}>
+        <Grid container item xs={12} sx={{background: "#F9F9F9"}} flex={0}>
+            <Box py={1}>
+                <CssTextField label="Search" size="small" fullWidth/>
+            </Box>
+
+            {/* <Grid container item xs={5}>
                 <Grid item display="flex" alignItems="center">
                     <IconButton sx={{m: 0.5, color: "white"}}><MenuRoundedIcon/></IconButton>
                 </Grid>
@@ -68,7 +75,7 @@ function Header() {
                 <Grid item display="flex" justifyContent="flex-end" alignItems="center">
                     <IconButton sx={{m: 1, color: "white"}}><AccountCircleRoundedIcon/></IconButton>
                 </Grid>
-            </Grid>
+            </Grid> */}
         </Grid>
     )
 }

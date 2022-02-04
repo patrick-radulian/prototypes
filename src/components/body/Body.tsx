@@ -2,17 +2,16 @@ import React from "react";
 import Navbar from "components/navbar/Navbar";
 import Style from './Body.module.css'
 import ProjectHome from "routes/project-home/project-home";
+import Header from "components/header/header";
 
 const Body = () => {
     return (
         <div className={Style.body}>
-            <Navbar side="left"/>
+            <Header/>
 
             <main className={Style.main}>
                 <ProjectHome/>
             </main>
-
-            <Navbar side="right" />
         </div>
     )
 }

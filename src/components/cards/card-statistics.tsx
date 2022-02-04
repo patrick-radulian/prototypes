@@ -9,16 +9,41 @@ const chartData = [
     { label: 'Labels', amount: 186 }
 ];
 
+interface LabelProps {
+    /** The label text */
+    text: string | number;
+    /** The x coordinate of the label’s top left corner */
+    x: number;
+    /** The y coordinate of the label’s top left corner */
+    y: number;
+    /** The label's offset from the baseline in CSS units */
+    dy: string;
+    /** The label’s text alignment */
+    textAnchor: string;
+}
+
+function ArgumentAxisLabel(props: LabelProps) {
+    return(
+        <text style={{fontSize: 10, fontWeight: 400, fill: "white"}} x={props.x} y={props.y} dy="1em" textAnchor={props.textAnchor}>{props.text}</text>
+    )
+}
+
+function ValueAxisLabel(props: LabelProps) {
+    return(
+        <text style={{fontSize: 10, fontWeight: 400, fill: "white"}} x={props.x} y={props.y} dy="0.3em" textAnchor={props.textAnchor}>{props.text}</text>
+    )
+}
+
 function CardStatistics() {
     return (
         <Box sx={{position: "relative", paddingBottom: "100%", height: 0}}>
-            <Card sx={{display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%"}}>
-                <CardHeader sx={{background: "#00ADEE", py: 1}} title={<Typography color="white" fontSize={16}>Statistics</Typography>}/>
+            <Card sx={{color: "white", display: "grid", gridTemplateRows: "auto 1fr", position: "absolute", width: "100%", height: "100%", background: "linear-gradient(to top right, #1a2d48, #556594)"}}>
+                <CardHeader sx={{color: "white", py: 1}} title="Statistics"/>
 
                 <CardContent sx={{maxHeight: {xl: 400, sm: 300}, overflow: "auto"}}>
                     <Chart data={chartData} height={250}>
-                        <ArgumentAxis/>
-                        <ValueAxis position="left"/>
+                        <ArgumentAxis labelComponent={ArgumentAxisLabel}/>
+                        <ValueAxis labelComponent={ValueAxisLabel} position="left"/>
                         <BarSeries valueField="amount" argumentField="label" color="#70be44"/>
                         <Animation/>
                     </Chart>
