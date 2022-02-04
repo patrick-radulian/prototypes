@@ -7,10 +7,10 @@ export const AppTheme = createTheme({
                 "::-webkit-scrollbar": {
                     width: "4px",
                     height: "4px",
-                    backgroundColor: "#00F"
+                    backgroundColor: "transparent"
                 },
                 "::-webkit-scrollbar-thumb": {
-                    color: "#F00"
+                    color: "#00ADEE"
                 }
             }
         }

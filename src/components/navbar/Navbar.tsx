@@ -87,7 +87,7 @@ const NavbarOption : React.FC<INavbarOptionProps> = ({Icon, label, side, collaps
             {hovered && <NavbarSelected Icon={Icon} label={label} side={side} subOptions={subOptions} collapsed={collapsed} />}
             <div className={Style.navbarOption} style={{...flexDirection, ...width}} >
                 <span className={Style.navbarOptionIcon}>
-                    <Icon style={{color: "#00ADEE"}} />
+                    <Icon style={{color: "white"}} />
                 </span>
                 <span className={Style.navbarOptionLabel}>{label}</span>
                 <span className={Style.navbarOptionIcon}>
